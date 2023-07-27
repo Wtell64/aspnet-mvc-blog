@@ -24,4 +24,19 @@ app.MapControllerRoute(
 	name: "default",
 	pattern: "{controller=Home}/{action=Index}/{id?}");
 
+app.MapControllerRoute(
+    name: "Category",
+    pattern: "{controller=Category}/{action=Index}/{category}-{slug}");
+
+app.MapControllerRoute(
+    name: "Blog",
+    pattern: "{controller=Blog}/{action=Detail}/{title}-{slug}");
+
+app.MapControllerRoute(
+    name: "Page",
+    pattern: "{controller=Page}/{action=Detail}/{title}-{slug}");
+
+
+
+
 app.Run();
